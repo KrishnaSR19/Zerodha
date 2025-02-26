@@ -24,10 +24,10 @@ const Menu = () => {
         <ul>
           <li>
             <Link
-            style={{textDecoration:"none"}} to="/" onlClick={()=>{
+            style={{textDecoration:"none"}} to="/" onClick={()=>{
               handleMenuClick(0);
             }}>
-            <p className={selectedMenu===0 ? activeMenuClass : menuClass}>Dashboard</p>
+            <p className={selectedMenu===0 ? activeMenuClass:menuClass}>Dashboard</p>
             </Link>
           </li>
           <li>
