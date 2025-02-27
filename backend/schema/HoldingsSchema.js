@@ -9,11 +9,4 @@ const HoldingsSchema = new Schema ({
     day:String,
 });
 
-const WatchListSchema = new Schema({
-    name: String,
-    price: Number,
-    percent: String,
-    isDown:Boolean,
-})
-
-module.exports = {HoldingsSchema,WatchListSchema};
+module.exports = {HoldingsSchema};
