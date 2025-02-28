@@ -7,6 +7,7 @@ const HoldingsSchema = new Schema ({
     price:Number,
     net:String,
     day:String,
+    isLoss:Boolean,
 });
 
 module.exports = {HoldingsSchema};
