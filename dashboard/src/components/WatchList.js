@@ -6,6 +6,8 @@ import GeneralContext from "./GeneralContext";
 
 import { watchlist } from "../data/data";
 
+import {DoughnutChart} from "./DoughnutChart";
+
 import {
   BarChartOutlined,
   KeyboardArrowDown,
@@ -15,7 +17,35 @@ import {
 
 import { use } from "react";
 
+const labels=watchlist.map((subArray)=>subArray["name"]);
+
+
 const WatchList = () => {
+  
+  const data = {
+    labels,
+    datasets:[
+      {
+        label:"Price",
+        data:watchlist.map((stock)=>stock.price),
+        backgroundColor:[
+           "rgba(255, 99, 132, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(75, 192, 192, 0.2)",
+            "rgba(153, 102, 255, 0.2)",
+            "rgba(255, 99, 132, 0.2)",
+        ],
+        borderWidth:1,
+      },
+    ]
+  }
+
+
+
+
+
+
   return (
     <div className="watchlist-container">
       <div className="search-container">
@@ -34,6 +64,8 @@ const WatchList = () => {
           return <WatchListItem stock={stock} key={index} />;
         })}
       </ul>
+
+      <DoughnutChart data={data} />
     </div>
   );
 };

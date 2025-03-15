@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -7,8 +7,9 @@ import {
   Title,
   Tooltip,
   Legend,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+
 
 ChartJS.register(
   CategoryScale,
@@ -23,15 +24,17 @@ export const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: "top",
+      position: 'top',
     },
     title: {
       display: true,
-      text: "Holdings",
+      text: 'Holdings',
     },
   },
 };
 
-export function VerticalGraph({ data }) {
+
+
+export function VerticalGraph({data}) {
   return <Bar options={options} data={data} />;
 }
